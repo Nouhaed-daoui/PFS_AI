@@ -1,16 +1,9 @@
-// /** @type {import('tailwindcss').Config} */
-// module.exports = {
-//   content: [],
-//   theme: {
-//     extend: {},
-//   },
-//   plugins: [],
-// }
 
 module.exports = {
   purge: [
-    './src/**/*.html',
-    './src/**/*.js',
+    './src/components/GetDiagnostic.js',
+    './src/components/News.js',
+    './src/components/NewDetails.js',
     // Add more files here to include in the purging process
   ],
   darkMode: false, // or 'media' or 'class'
