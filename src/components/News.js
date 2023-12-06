@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardHeader, CardBody, Typography,} from "@material-tailwind/react";
 import { Link } from 'react-router-dom';
 import { newsData } from '../data/newsData';
+import  '../styles/tailwind.css';
 
 
 export function News() {

@@ -1,6 +1,8 @@
 import React from 'react';
 import FooterHome from './FooterHome';
-import LandingPage from '../images/landingpage.jpeg';
+// import LandingPage from '../images/landingpage.jpeg';
+import LandingPage from '../images/homeimagee.jpeg';
+
 
 function Home() {
   const styles = {
@@ -71,7 +73,7 @@ function Home() {
         <div style={styles.welcomeText}>
           <h2 style={styles.welcomeTitle}>Welcome to Our Application</h2>
           <p>We aim to satisfy your needs and provide the best experience.</p>
-          <a href="/your-target-page" style={styles.welcomeButton}>Get a free diagnosis</a>
+          <a href="/GetDiagnostic" style={styles.welcomeButton}>Get a free diagnosis</a>
         </div>
       </main>
       <FooterHome style={styles.headerFooter} />

@@ -1,3 +1,5 @@
+import  '../styles/tailwind.css';
+
 import {React,useRef}from 'react';
 
 export default function GetDiagnostic() {

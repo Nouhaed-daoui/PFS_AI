@@ -29,13 +29,14 @@ const App = () => {
   return (
     <Router>
     <HeaderHome style={styles.headerHome} />
-    <NavBar />
+    {/* <NavBar /> */}
     {/* <GetDiagnostic /> */}
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/blogs" element={<Blog/>} />
+        <Route path="/blog" element={<Blog/>} />
         <Route path="/blog/:blogId" element={<BlogDetail/>} />
         <Route path="/news" element={<News />} />
+        <Route path="/GetDiagnostic" element={<GetDiagnostic />} />
         <Route path="/news/post/:id" element={<NewsDetails newsData={newsData} />} />
       </Routes>
       
