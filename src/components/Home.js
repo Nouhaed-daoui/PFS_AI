@@ -45,7 +45,7 @@ function Home() {
       fontSize: '2.5em', // Taille du titre augmentée
     },
     welcomeButton: {
-      backgroundColor: '#4caf50',
+      // backgroundColor: '#4caf50',
       color: 'white',
       padding: '15px 30px', // Taille du bouton augmentée
       textDecoration: 'none',
@@ -62,7 +62,7 @@ function Home() {
   };
 
   return (
-    <div style={styles.app}>
+    <div style={styles.app} className='bg-gradient-to-t from-lime-400 to-lime-50'>
       <main style={styles.main}>
         {/* Partie gauche avec l'image */}
         <div style={styles.landingContainer}>
@@ -71,9 +71,9 @@ function Home() {
 
         {/* Partie droite avec le texte et le bouton */}
         <div style={styles.welcomeText}>
-          <h2 style={styles.welcomeTitle}>Welcome to Our Application</h2>
-          <p>We aim to satisfy your needs and provide the best experience.</p>
-          <a href="/GetDiagnostic" style={styles.welcomeButton}>Get a free diagnosis</a>
+          <h2 style={styles.welcomeTitle}>Web Site for Plant Disease Detection</h2>
+          <p>identifies your plant diseases and improve productivity and get farming knowledge for free.</p>
+          <a href="/GetDiagnostic"  style={styles.welcomeButton} className='bg-blue-600'>Get a free diagnosis</a>
         </div>
       </main>
       <FooterHome style={styles.headerFooter} />
