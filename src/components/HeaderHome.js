@@ -58,8 +58,8 @@ const HeaderHome = () => {
         <Link to="/news" style={linkStyle}>
           News 
         </Link>
-        <Link to="/ContactUs" style={linkStyle}>
-          Contact us
+        <Link to="/Contact" style={linkStyle}>
+          Contact Us
         </Link>
         <Link to="/SignOut" style={linkStyle}>
           Sign Out

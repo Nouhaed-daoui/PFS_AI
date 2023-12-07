@@ -12,6 +12,8 @@ import { News } from './components/News';
 import NewsDetails from './components/NewDetails';
 import { newsData } from './data/newsData';
 import GetDiagnostic from './components/GetDiagnostic';
+import Result from './components/Result';
+import ContactUsPage from './components/ContactUS';
 
 
 const App = () => {
@@ -37,6 +39,8 @@ const App = () => {
         <Route path="/blog/:blogId" element={<BlogDetail/>} />
         <Route path="/news" element={<News />} />
         <Route path="/GetDiagnostic" element={<GetDiagnostic />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/news/post/:id" element={<NewsDetails newsData={newsData} />} />
       </Routes>
       
