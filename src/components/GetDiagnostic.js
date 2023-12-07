@@ -1,20 +1,91 @@
 import  '../styles/tailwind.css';
+import axios from 'axios';
+import {React, useRef, useState, useEffect} from 'react';
 
-import {React,useRef}from 'react';
+// const axios = require("axios").default;
+
+
+
 
 export default function GetDiagnostic() {
 
     const fileInputRef = useRef(null);
+    const [selectedFile, setSelectedFile] = useState();
+    const [preview, setPreview] = useState();
+    const [data, setData] = useState();
+    const [image, setImage] = useState(false);
+    const [isLoading, setIsloading] = useState(false);
+    let confidence = 0;
       
-    const handleImageChange = (event) => {
-        const selectedFile = event.target.files[0];
-        if (selectedFile) {
-            // Do something with the selected file
-            console.log("Selected file:", selectedFile);
+    const sendFile = async () => {
+      console.log("START sendfile ...", process.env.REACT_APP_API_URL)
+
+      if (image && process.env.REACT_APP_API_URL) {
+        let formData = new FormData();
+        formData.append("file", selectedFile);
+        // Call API
+        console.log("START REQUEST ...", formData)
+        let res = await axios({
+          method: "post",
+          url: process.env.REACT_APP_API_URL,
+          data: formData,
+        });
+        console.log("END REQUEST ...")
+
+        if (res.status === 200) {
+          setData(res.data);
+          console.log("response: ", res.data)
+
         }
+        setIsloading(false);
+      }
+    }
+
+    const clearData = () => {
+      setData(null);
+      setImage(false);
+      setSelectedFile(null);
+      setPreview(null);
     };
+
+    useEffect(() => {
+      if (!selectedFile) {
+        setPreview(undefined);
+        return;
+      }
+      const objectUrl = URL.createObjectURL(selectedFile);
+      console.log("object url:", objectUrl)
+      setPreview(objectUrl);
+    }, [selectedFile]);
+  
+    useEffect(() => {
+      if (!preview) {
+        return;
+      }
+      setIsloading(true);
+      sendFile();
+    }, [preview]);
+
+    // Whene we click the upload button
+    const handleImageChange = (event) => {
+      if (!event || event.length === 0) {
+        console.log("The Selected file:");
+        setSelectedFile(undefined);
+        setImage(false);
+        setData(undefined);
+        return;
+      }
+      setSelectedFile(event.target.files[0]);
+      setData(undefined);
+      setImage(true);
+      console.log("The Selected file:", selectedFile);
+    };
+
+    if (data) {
+      confidence = (parseFloat(data.confidence) * 100).toFixed(2);
+    }
       
-    const handleButtonClick = () => {
+    const handleUploadButtonClick = () => {
           fileInputRef.current.click();
     };
     
@@ -37,7 +108,7 @@ export default function GetDiagnostic() {
               </button>
           </div>
           <div className="py-2 px-20 mx-20">
-                  <button className="bg-green-700 text-white font-bold rounded hover:bg-green-800 py-2 px-4 mt-2" onClick={handleButtonClick}>
+                  <button className="bg-green-700 text-white font-bold rounded hover:bg-green-800 py-2 px-4 mt-2" onClick={handleUploadButtonClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6 mx-auto">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
                     </svg>
