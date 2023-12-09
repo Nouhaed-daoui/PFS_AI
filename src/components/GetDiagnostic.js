@@ -4,6 +4,8 @@ import {React, useRef, useState, useEffect} from 'react';
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { CircularProgress } from "@material-ui/core";
+import { useNavigate } from 'react-router-dom'
+
 
 
 export default function GetDiagnostic() {
@@ -15,6 +17,8 @@ export default function GetDiagnostic() {
     const [image, setImage] = useState(false);
     const [isLoading, setIsloading] = useState(false);
     let confidence = 0;
+    let plantClass = "";
+    const navigate = useNavigate();
       
     const sendFile = async () => {
       if (image && process.env.REACT_APP_API_URL) {
@@ -80,6 +84,11 @@ export default function GetDiagnostic() {
 
     if (data) {
       confidence = (parseFloat(data.confidence) * 100).toFixed(2);
+      plantClass = data.class;
+
+      // navigate(`/result/${plantClass}`,{plantClass});
+      navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
+
     }
       
     const handleUploadButtonClick = () => {
@@ -127,6 +136,7 @@ export default function GetDiagnostic() {
                 </Typography>
             </CardContent>
           }
+
 
           <div className="py-2 px-20 mx-20">
                   <button className="bg-blue-700 text-white font-bold rounded hover:bg-blue-800 py-2 px-4 mt-2" onClick={handleUploadButtonClick}>
