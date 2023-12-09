@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import  '../styles/tailwind.css';
 import {useLocation, useParams } from 'react-router-dom'
@@ -27,10 +28,13 @@ const Result = () => {
                 <div className="text-slate-800 text-center text-5xl font-bold leading-7 grow shrink basis-auto max-md:max-w-full max-md:text-4xl max-md:leading-6">
                   Diagnosis Result
                 </div>
+
                 <div onClick={() => navigate('/GetDiagnostic')} className="text-white text-right text-sm whitespace-nowrap justify-center items-stretch bg-blue-700 hover:bg-blue-800 cursor-pointer shadow-lg px-6 py-2.5 rounded-lg self-start max-md:px-5">
+
                   + New Detection
                 </div>
               </div>
+
 
               <div className="bg-white flex-col shadow-2xl fill-white overflow-hidden self-stretch relative flex min-h-[12px] w-full items-stretch mt-6 py-11 max-md:max-w-full">
                 <img
@@ -43,6 +47,7 @@ const Result = () => {
                 <div className="bg-red-600 relative justify-center text-white text-center text-2xl font-bold leading-7 max-w-full  self-center  items-center mt-8 px-16 py-7 rounded-xl max-md:px-5">
                   {plantClass}
                 </div>
+
 
                 <div className="relative flex flex-col mt-12 pl-12 pr-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
                   <div className="text-black text-3xl font-bold leading-7 self-stretch max-md:max-w-full">
@@ -89,6 +94,8 @@ const Result = () => {
           </div>
         </div>
       );
+
 };
 
 export default Result
+

@@ -7,6 +7,10 @@ import { CircularProgress } from "@material-ui/core";
 import { useNavigate } from 'react-router-dom'
 
 
+// const axios = require("axios").default;
+
+
+
 
 export default function GetDiagnostic() {
 
@@ -17,10 +21,12 @@ export default function GetDiagnostic() {
     const [image, setImage] = useState(false);
     const [isLoading, setIsloading] = useState(false);
     let confidence = 0;
+
     let plantClass = "";
     const navigate = useNavigate();
       
     const sendFile = async () => {
+
       if (image && process.env.REACT_APP_API_URL) {
         let formData = new FormData();
         formData.append("file", selectedFile);
@@ -47,6 +53,7 @@ export default function GetDiagnostic() {
       setImage(false);
       setSelectedFile(null);
       setPreview(null);
+
     };
 
     useEffect(() => {
@@ -89,6 +96,7 @@ export default function GetDiagnostic() {
       // navigate(`/result/${plantClass}`,{plantClass});
       navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
 
+
     }
       
     const handleUploadButtonClick = () => {
@@ -108,11 +116,13 @@ export default function GetDiagnostic() {
                 farming knowledge for free.
               </h4>
             </div>
+
       </div>
 
       <div className='flex justify-center '>
         <img  src='https://petapixel.com/assets/uploads/2019/06/identifynaturefeattt.jpg' className="h-full me-2 rounded-lg shadow-sm overflow-hidden self-center max-w-full"  width={800} height={750}></img>
       </div>
+
       <h3 className='text-green text-5xl font-semibold mx-auto text-center mt-6 '>
         Get a Diagnostic
       </h3>
@@ -140,6 +150,7 @@ export default function GetDiagnostic() {
 
           <div className="py-2 px-20 mx-20">
                   <button className="bg-blue-700 text-white font-bold rounded hover:bg-blue-800 py-2 px-4 mt-2" onClick={handleUploadButtonClick}>
+
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6 mx-auto">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5"/>
                     </svg>
