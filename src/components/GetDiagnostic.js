@@ -50,6 +50,7 @@ export default function GetDiagnostic() {
       setImage(false);
       setSelectedFile(null);
       setPreview(null);
+
     };
 
     useEffect(() => {
@@ -87,12 +88,6 @@ export default function GetDiagnostic() {
 
     if (data) {
       confidence = (parseFloat(data.confidence) * 100).toFixed(2);
-      plantClass = data.class;
-
-      // navigate(`/result/${plantClass}`,{plantClass});
-      navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
-
-
     }
       
     const handleUploadButtonClick = () => {
@@ -112,11 +107,13 @@ export default function GetDiagnostic() {
                 farming knowledge for free.
               </h4>
             </div>
+
       </div>
 
       <div className='flex justify-center '>
         <img  src='https://petapixel.com/assets/uploads/2019/06/identifynaturefeattt.jpg' className="h-full me-2 rounded-lg shadow-sm overflow-hidden self-center max-w-full"  width={800} height={750}></img>
       </div>
+
       <h3 className='text-green text-5xl font-semibold mx-auto text-center mt-6 '>
         Get a Diagnostic
       </h3>
@@ -141,8 +138,8 @@ export default function GetDiagnostic() {
             </CardContent>
           }
 
-
           <div className="py-2 px-20 mx-20">
+
                   <button className="bg-blue-700 text-white font-bold rounded hover:bg-blue-800 py-2 px-4 mt-2" onClick={handleUploadButtonClick}>
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6 mx-auto">

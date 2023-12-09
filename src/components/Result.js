@@ -15,6 +15,20 @@ const Result = () => {
   console.log("params in result: ", plantClass);
   console.log("params in result: ", confidence);
   console.log("Selected file in result:", selectedFile);
+import {useLocation, useParams } from 'react-router-dom'
+
+
+
+
+const Result = () => {
+  // const {plantClass} = useParams();
+  const navigate = useNavigate();
+  const { state } = useLocation();
+  const { plantClass, confidence, selectedFile } = state || {};
+
+  console.log("params in result: ", plantClass);
+  console.log("params in result: ", confidence);
+  console.log("Selected file in result:", selectedFile);
 
 
     return (
@@ -38,7 +52,13 @@ const Result = () => {
                   src={URL.createObjectURL(selectedFile)}
                   alt="Selected Plant"
                   className=" aspect-[1.19] rounded-lg shadow-md object-contain object-center w-[426px] shadow-sm overflow-hidden self-center max-w-full mt-16 max-md:mt-10"
+                  src={URL.createObjectURL(selectedFile)}
+                  alt="Selected Plant"
+                  className=" aspect-[1.19] rounded-lg shadow-md object-contain object-center w-[426px] shadow-sm overflow-hidden self-center max-w-full mt-16 max-md:mt-10"
                 />
+
+                <div className="bg-red-600 relative justify-center text-white text-center text-2xl font-bold leading-7 max-w-full  self-center  items-center mt-8 px-16 py-7 rounded-xl max-md:px-5">
+                  {plantClass}
 
                 <div className="bg-red-600 relative justify-center text-white text-center text-2xl font-bold leading-7 max-w-full  self-center  items-center mt-8 px-16 py-7 rounded-xl max-md:px-5">
                   {plantClass}
@@ -89,6 +109,7 @@ const Result = () => {
           </div>
         </div>
       );
+
 };
 
 export default Result
