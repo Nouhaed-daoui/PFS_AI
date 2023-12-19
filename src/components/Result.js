@@ -13,9 +13,11 @@ const Result = () => {
   const { state } = useLocation();
   const { plantClass, confidence, selectedFile } = state || {};
 
-  console.log("params in result: ", plantClass);
-  console.log("params in result: ", confidence);
-  console.log("Selected file in result:", selectedFile);
+  //FOR DEBUGGING
+  // console.log("Plant class result: ", plantClass);
+  // console.log("confidence in result: ", confidence);
+  // console.log("Selected file in result:", selectedFile);
+
 
 
     return (
@@ -92,7 +94,6 @@ const Result = () => {
           </div>
         </div>
       );
-
 };
 
 export default Result
