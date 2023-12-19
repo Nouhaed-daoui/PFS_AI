@@ -39,7 +39,7 @@ const BlogCard = styled.div`
   width: 300px;
   margin: 20px;
   padding: 15px;
-  border: 5px solid #4caf50;
+  // border: 5px solid #4caf50;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -78,16 +78,16 @@ const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const blogs = [
-    { id: 1, title: 'Ash tree', content: 'Ash trees are deciduous trees that...',image: AshTreeSain },
-    { id: 2, title: 'Orchids', content: 'Orchids are stunning flowers that require special care......' ,image: OrchidSain},
-    { id: 3, title: 'Roses', content: 'Roses, with their magnificent flowers, are plants cherished in...',image: RosierSain},
-    { id: 4, title: 'Cactus Varieties', content: 'Cactus Varieties are unique and fascinating plants known for...',image: CactusSain },
+    { id: 1, title: 'Ash tree', content: 'Ash trees are deciduous trees that ...',image: AshTreeSain },
+    { id: 2, title: 'Orchids', content: 'Orchids are stunning flowers that require special care ...' ,image: OrchidSain},
+    { id: 3, title: 'Roses', content: 'Roses, with their magnificent flowers, are plants cherished in ...',image: RosierSain},
+    { id: 4, title: 'Cactus Varieties', content: 'Cactus Varieties are unique and fascinating plants known for ...',image: CactusSain },
     { id: 5, title: 'Bamboo ', content: 'Bamboo is a versatile and fast-growing plant that can add...',image: BambooSain },
-    { id: 6, title: 'Tulipomania', content: 'Tulipomania refers to a period in the 17th century during which tulip bulbs became...',image: TulipomaniaSain },
-    { id: 7, title: 'Sunflowers ', content: 'Sunflowers, with their vibrant yellow petals and distinctive appearance, have...',image:SunFlowersSain },
-    { id: 8, title: 'Bonsai  ', content: 'Bonsai, the art of cultivating miniature trees, is a centuries-old practice that...',image: BonsaiSain },
+    { id: 6, title: 'Tulipomania', content: 'Tulipomania refers to a period in the 17th century during which tulip bulbs became ...',image: TulipomaniaSain },
+    { id: 7, title: 'Sunflowers ', content: 'Sunflowers, with their vibrant yellow petals and distinctive appearance, have ...',image:SunFlowersSain },
+    { id: 8, title: 'Bonsai  ', content: 'Bonsai, the art of cultivating miniature trees, is a centuries-old practice that ...',image: BonsaiSain },
     { id: 9, title: 'Ferns', content: 'Ferns are versatile and elegant plants that add ...' ,image: FersSain},
-    { id: 10, title: 'Aloe Vera', content: 'Aloe vera, known for its succulent leaves and various medicinal properties, is a popular plant...',image: AloeVeraSain },
+    { id: 10, title: 'Aloe Vera', content: 'Aloe vera, known for its succulent leaves and various medicinal properties, is a popular plant ...',image: AloeVeraSain },
     // ... Add more entries for other plants
   ];
 
@@ -108,7 +108,7 @@ const Blog = () => {
 
   return (
     
-    <div>
+    <div  className='bg-gradient-to-t from-lime-400 to-lime-50 p-5 '>
     <Header />
       <center>
         

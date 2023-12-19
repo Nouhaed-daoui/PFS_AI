@@ -73,7 +73,8 @@ function Home() {
         <div style={styles.welcomeText}>
           <h2 style={styles.welcomeTitle}>Web Site for Plant Disease Detection</h2>
           <p>identifies your plant diseases and improve productivity and get farming knowledge for free.</p>
-          <a href="/GetDiagnostic"  style={styles.welcomeButton} className='bg-blue-600'>Get a free diagnosis</a>
+          <a href="/GetDiagnostic"  style={styles.welcomeButton} className='bg-blue-600 hover:bg-blue-800'>Get a free diagnosis</a>
+
         </div>
       </main>
       <FooterHome style={styles.headerFooter} />

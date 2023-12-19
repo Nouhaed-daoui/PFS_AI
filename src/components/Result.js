@@ -13,9 +13,11 @@ const Result = () => {
   const { state } = useLocation();
   const { plantClass, confidence, selectedFile } = state || {};
 
-  console.log("params in result: ", plantClass);
-  console.log("params in result: ", confidence);
-  console.log("Selected file in result:", selectedFile);
+  //FOR DEBUGGING
+  // console.log("Plant class result: ", plantClass);
+  // console.log("confidence in result: ", confidence);
+  // console.log("Selected file in result:", selectedFile);
+
 
 
     return (
@@ -28,7 +30,6 @@ const Result = () => {
                 <div className="text-slate-800 text-center text-5xl font-bold leading-7 grow shrink basis-auto max-md:max-w-full max-md:text-4xl max-md:leading-6">
                   Diagnosis Result
                 </div>
-
                 <div onClick={() => navigate('/GetDiagnostic')} className="text-white text-right text-sm whitespace-nowrap justify-center items-stretch bg-blue-700 hover:bg-blue-800 cursor-pointer shadow-lg px-6 py-2.5 rounded-lg self-start max-md:px-5">
 
                   + New Detection
@@ -94,7 +95,6 @@ const Result = () => {
           </div>
         </div>
       );
-
 };
 
 export default Result
