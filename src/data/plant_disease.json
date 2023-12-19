@@ -1,0 +1,34 @@
+[ 
+    {
+        "id":"001", 
+        "nameID":"Apple___Apple_scab", 
+        "name":"Apple scab",
+        "type":"Apple",
+        "description":"A serious disease of apples and ornamental crabapples, apple scab (Venturia inaequalis) attacks both leaves and fruit. \n        It produces lesions that can be observed on leaves, as well as blossoms, sepals, pedicels, petioles, and even the fruit itself./n        The fungal disease first appears as pale yellow or olive-green spots on the upper surface of leaves. Dark, velvety spots may appear on the lower surface of young leaves as they are exposed to the infection.\n        These lesions have poorly formed borders and, for this reason, can sometimes be mistaken for sooty mold or even leaf fuzz. Severely infected leaves and tissues become twisted and puckered, turn yellow, and may drop early in the summer.\nUnfortunately, two to three years of consecutive defoliation in this manner can weaken the tree significantly, making it vulnerable to other diseases, insects, and stresses such as freeze damage.",
+        "treatement":"Managing and treating the apple scab fungus is an integrated process that combines sanitation, resistant cultivars, and fungicides. Let’s look at the steps you can take to treat and manage this disease: \n Choose Scab-Resistant Cultivars \nThe best line of defense is to choose resistant varieties when possible. Some great scab-resistant apple cultivars include:\nCrimson Crisp\n        Crimson Gold\nEnterprise\nFreedom\nGoldrush\nJonafree\nLiberty\nNova Easygro\nNovamac\nPriscilla\nPristine\nRedfree\nScarlet Prima\nSir Prize"
+    },
+    {
+        "id":"002", 
+        "nameID":"Apple___Black_rot", 
+        "name":"Apple black rot",
+        "type":"Apple",
+        "description":"",
+        "treatement":""
+    },
+    {
+        "id":"003", 
+        "nameID":"Apple___Cedar_apple_rust", 
+        "name":"Apple Cedar apple rust",
+        "type":"Apple",
+        "description":"",
+        "treatement":""
+    },
+    {
+        "id":"004", 
+        "nameID":"Apple___healthy", 
+        "name":"Apple healthy",
+        "type":"Apple",
+        "description":"",
+        "treatement":""
+    }
+]
