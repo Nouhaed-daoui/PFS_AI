@@ -14,7 +14,7 @@ const Result = () => {
   const { plantClass, confidence, selectedFile } = state || {};
 
   //FOR DEBUGGING
-  // console.log("Plant class result in result: !!! ", plantClass);
+  // console.log("Plant class result: ", plantClass);
   // console.log("confidence in result: ", confidence);
   // console.log("Selected file in result:", selectedFile);
 

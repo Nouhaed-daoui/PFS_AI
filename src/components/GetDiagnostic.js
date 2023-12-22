@@ -7,9 +7,6 @@ import { CircularProgress } from "@material-ui/core";
 import { useNavigate } from 'react-router-dom'
 
 
-// const axios = require("axios").default;
-
-
 
 
 export default function GetDiagnostic() {
@@ -93,6 +90,7 @@ export default function GetDiagnostic() {
     if (data) {
       confidence = (parseFloat(data.confidence)).toFixed(2);
       plantClass = data.predicted_class;
+
 
       navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
     }
