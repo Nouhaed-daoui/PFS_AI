@@ -109,7 +109,7 @@ const Blog = () => {
   return (
     
     <div  className='bg-gradient-to-t from-lime-400 to-lime-50 p-5 '>
-    <Header />
+    {/* <Header /> */}
       <center>
         
         <h2 style={{ color: '#4caf50' }}>-- Let's know more about plants  <Emoji role="img" aria-label="Plant">
@@ -118,7 +118,7 @@ const Blog = () => {
        
         <SearchInput
           type="text"
-          placeholder="Search blogs..."
+          placeholder="Search Plant..."
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
@@ -128,7 +128,20 @@ const Blog = () => {
         <Emoji role="img" aria-label="Search">
             🔍
           </Emoji>
-        {totalPages > 1 && (
+
+      </center>
+      <BlogList>
+        {currentBlogs.map((blog) => (
+          <BlogCard key={blog.id}>
+            <img src={blog.image} alt={`Blog ${blog.id} Image`} style={{ width: '100%', height: '50%', objectFit: 'cover', borderRadius: '10px'}} />
+            <h3 style={{ color: '#4caf50' }}>{blog.title}</h3>
+            <p>{blog.content.substring(0, 100)}...</p>
+            <ReadMoreLink to={`/blog/${blog.id}`}>Read More</ReadMoreLink>
+          </BlogCard>
+        ))}
+      </BlogList>
+
+      {totalPages > 1 && (
         <Pagination>
           {Array.from({ length: totalPages }).map((_, index) => (
             <PageNumber
@@ -141,17 +154,6 @@ const Blog = () => {
           ))}
         </Pagination>
       )}
-      </center>
-      <BlogList>
-        {currentBlogs.map((blog) => (
-          <BlogCard key={blog.id}>
-            <img src={blog.image} alt={`Blog ${blog.id} Image`} style={{ width: '100%', height: '50%', objectFit: 'cover', borderRadius: '10px'}} />
-            <h3 style={{ color: '#4caf50' }}>{blog.title}</h3>
-            <p>{blog.content.substring(0, 100)}...</p>
-            <ReadMoreLink to={`/blog/${blog.id}`}>Read More</ReadMoreLink>
-          </BlogCard>
-        ))}
-      </BlogList>
       
     </div>
   );

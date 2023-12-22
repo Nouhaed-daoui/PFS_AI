@@ -54,22 +54,21 @@ function Home() {
       display: 'inline-block',
       fontSize: '1.2em', // Taille du texte du bouton augmentée
     },
-    headerFooter: {
-      backgroundColor: '#333',
-      color: 'white',
-      padding: '50px',
-    },
+    // headerFooter: {
+    //   backgroundColor: '#333',
+    //   color: 'white',
+    //   padding: '50px',
+    // },
   };
 
   return (
-    <div style={styles.app} className='bg-gradient-to-t from-lime-400 to-lime-50'>
-      <main style={styles.main}>
-        {/* Partie gauche avec l'image */}
+    // style={styles.app}
+    <div  className='bg-gradient-to-t from-lime-400 to-lime-50 pt-16'>
+      <main style={styles.main} className=' grid  content-center'>
         <div style={styles.landingContainer}>
-          <img src={LandingPage} alt="Landing Page Image" style={styles.landingImage} />
+          <img src={LandingPage} alt="Landing Page Image" style={styles.landingImage} className='' />
         </div>
 
-        {/* Partie droite avec le texte et le bouton */}
         <div style={styles.welcomeText}>
           <h2 style={styles.welcomeTitle}>Web Site for Plant Disease Detection</h2>
           <p>identifies your plant diseases and improve productivity and get farming knowledge for free.</p>
@@ -77,7 +76,7 @@ function Home() {
 
         </div>
       </main>
-      <FooterHome style={styles.headerFooter} />
+      {/* <FooterHome style={styles.headerFooter} /> */}
     </div>
   );
 }
