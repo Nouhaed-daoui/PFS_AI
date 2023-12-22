@@ -18,7 +18,7 @@ export default function GetDiagnostic() {
     const [image, setImage] = useState(false);
     const [isLoading, setIsloading] = useState(false);
     let confidence = 0;
-
+    
     let plantClass = "";
     const navigate = useNavigate();
       
@@ -41,8 +41,6 @@ export default function GetDiagnostic() {
 
         if (res.status === 200) {
           setData(res.data);
-          console.log("response: ", res.data)
-
         }
         setIsloading(false);
       }
@@ -86,32 +84,21 @@ export default function GetDiagnostic() {
       setSelectedFile(event.target.files[0]);
       setData(undefined);
       setImage(true);
-      console.log("The Selected file:", selectedFile);
+      console.log("The Selected file: >>>>>>", selectedFile);
     };
 
     if (data) {
-      confidence = (parseFloat(data.confidence) * 100).toFixed(2);
+      confidence = (parseFloat(data.confidence)).toFixed(2);
       plantClass = data.predicted_class;
 
-      // navigate(`/result/${plantClass}`,{plantClass});
-      navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
 
+      navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
     }
 
     // 
     const handleTakePicture = async () => {
 
     };
-
-    if (data) {
-      confidence = (parseFloat(data.confidence) * 100).toFixed(2);
-      plantClass = data.class;
-
-      // navigate(`/result/${plantClass}`,{plantClass});
-      navigate(`/result`, { state: { selectedFile, confidence, plantClass } });
-
-
-    }
       
     const handleUploadButtonClick = () => {
           fileInputRef.current.click();
@@ -161,7 +148,9 @@ export default function GetDiagnostic() {
           }
 
 
+
           <div className="py-2 px-20 ">
+
                   <button className="bg-blue-700 text-white font-bold rounded hover:bg-blue-800 py-2 px-4 mt-2" onClick={handleUploadButtonClick}>
 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-6 mx-auto">
