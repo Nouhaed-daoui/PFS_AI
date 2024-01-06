@@ -1,6 +1,8 @@
 import * as React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -9,8 +11,8 @@ const Footer = () => {
     <div className="justify-center items-center flex flex-col px-16 max-md:px-5 m-4">
       <div className="flex w-[760px] max-w-full flex-col">
         <div className="justify-center text-lime-700 text-center text-xl font-bold self-stretch max-md:max-w-full mb-4">🍃 Kachf</div>
-        <div className="text-zinc-900 text-sm self-center whitespace-nowrap">Our Vision API</div>
-        <div className="text-zinc-900 text-sm self-center whitespace-nowrap mt-1">Contact us</div>
+        <div className="text-zinc-900 text-sm self-center whitespace-nowrap"><Link to="#">Our Vision API</Link></div>
+        <div className="text-zinc-900 text-sm self-center whitespace-nowrap mt-1"><Link to="/Contact">Contact Us</Link></div>
         <div className="items-stretch self-center flex w-[296px] max-w-full justify-between gap-5 my-3 pt-3">
           <img
             loading="lazy"
