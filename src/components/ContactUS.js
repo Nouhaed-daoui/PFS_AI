@@ -29,7 +29,7 @@ const ContactUsPage = () => {
             message: formData.message
         }
 
-        axios.post('http://localhost:3001/contact', newContact)
+        axios.post('/contact', newContact)
 
         setIsSent(true);
 

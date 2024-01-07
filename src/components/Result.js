@@ -54,7 +54,6 @@ const Result = () => {
         treatment: matchingPlant.treatement 
       });
     } else {
-      // Handle the case where no matching plant is found
       setDiagnosisResult({
         plantName: "",
         description: "No description found",
@@ -87,7 +86,7 @@ const Result = () => {
                   loading="lazy"
                   src={URL.createObjectURL(selectedFile)}
                   alt="Selected Plant"
-                  className=" aspect-[1.19] rounded-lg shadow-md object-contain object-center w-[426px] shadow-sm overflow-hidden self-center max-w-full mt-16 max-md:mt-10"
+                  className=" aspect-[1.19]    shadow-md object-contain object-center w-[426px] shadow-sm overflow-hidden self-center max-w-full mt-16 max-md:mt-10"
                 />
 
                 <div className="bg-red-600 relative justify-center text-white text-center text-2xl font-bold leading-7 max-w-full  self-center  items-center mt-8 px-16 py-7 rounded-xl max-md:px-5">
@@ -109,7 +108,7 @@ const Result = () => {
                                   <div className="text-black text-lg font-medium leading-8 self-stretch mt-14 max-md:max-w-full max-md:mt-10">
                                     {diagnosisResult.treatment}
                                   </div>
-                                  <div className="bg-lime-400 flex items-center justify-between gap-5 mt-8 pl-11 pr-20 py-3.5 rounded-xl self-start max-md:px-5">
+                                  <div className="bg-lime-400 hover:bg-lime-300 cursor-pointer flex items-center justify-between gap-5 mt-8 pl-11 pr-20 py-3.5 rounded-full self-start max-md:px-5">
                                     <img
                                       loading="lazy"
                                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/fd56c033920e38c35177af8d7d8e60ff9701eeff3d1a4448dcd4c14d1706778c?"
