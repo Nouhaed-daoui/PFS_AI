@@ -58,6 +58,7 @@ const HeaderHome = () => {
               </Link>
             </div>
             <div className="text-stone-800 text-m">
+
               <Link to="/library">
                 Library
               </Link>
