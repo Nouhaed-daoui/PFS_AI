@@ -64,7 +64,7 @@ function Home() {
   return (
     // style={styles.app}
     <div>
-      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-16'>
+      <div  className='bg-gradient-to-t from-lime-300 to-lime-50 pt-16 '>
         <main style={styles.main} className=' grid  content-center'>
           <div style={styles.landingContainer}>
             {/* <img src={LandingPage} alt="Landing Page Image" style={styles.landingImage} className='' /> */}
@@ -75,15 +75,19 @@ function Home() {
             />
           </div>
 
-          <div style={styles.welcomeText} className='justify-between gap-5 items-center flex flex-col justify-center '>
-            {/* <h2 style={styles.welcomeTitle}>Web Site for Plant Disease Detection</h2> */}
-            <div className="max-w-[684px] text-zinc-900 text-center text-5xl font-semibold leading-[57px] max-md:max-w-full">
-              Kachf: an AI-powered WebSite for Plant Disease Detection
-            </div>
-            <p>identifies your plant diseases and improve productivity and get farming knowledge for free.</p>
-            <a href="/GetDiagnostic"  style={styles.welcomeButton} className='bg-blue-600 hover:bg-blue-800'>Get a free diagnosis</a>
-
+          <div className="md:w-1/2 text-left text-zinc-900">
+            <h2 className="text-4xl  md:text-5xl lg:text-6xl font-bold mb-4">
+              Kachf: an AI-powered WebSite for Plant Disease Detection            
+            </h2>
+            <p className="text-lg mb-6 mt-4 leading-7">
+              identifies your plant diseases and improve productivity and get farming knowledge for free.            
+            </p>
+            <a href="/GetDiagnostic" className="bg-indigo-600 hover:bg-indigo-800 text-white px-8 py-4 rounded-full text-lg transition duration-300 inline-block">
+              Get a free diagnosis
+            </a>
           </div>
+
+
         </main>
       
       </div>
@@ -101,78 +105,60 @@ function Home() {
           className="aspect-[1.24] object-contain object-center w-full-50% overflow-hidden self-stretch"
         />
       </div>
-      <div className="w-full max-w-[1140px] mt-7 max-md:max-w-full">
+      <div className="w-full max-w-[1140px] mt-7 max-md:max-w-full py-8">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-          <div className="flex flex-col items-stretch w-[36%] max-md:w-full max-md:ml-0">
-            <div className="items-center flex grow flex-col pt-2.5 px-2.5">
-              <div className="text-zinc-800 text-lg leading-7 max-w-[367px]">
-                The website is efficient and user-friendly, making it a help to identify crop diseases and find both chemical and biological treatments that  we can use.
-              </div>
-              <div className="self-stretch flex justify-between gap-0 mt-14 pr-14 pb-12 items-start max-md:mt-10 max-md:pr-5">
-                <div className="flex-col justify-center items-center overflow-hidden relative flex aspect-square w-14">
-                  <img
-                    loading="lazy"
-                    srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&"
-                    className="absolute h-full w-full object-cover object-center inset-0"
-                  />
-                </div>
-                <div className="items-stretch flex grow basis-[0%] flex-col pl-2.5 pr-7 max-md:pr-5">
-                  <div className="text-zinc-800 text-lg leading-7 whitespace-nowrap">
-                    Benaarouch Mohamed
-                  </div>
-                  <div className="text-zinc-600 text-sm leading-5 mt-2">
-                    IT Student | Morocco
-                  </div>
-                </div>
-              </div>
+
+        <div className=" p-6 rounded-lg shadow-md text-center">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcab6a2ea710328cfd0f66eb92f711f1616d41a295bd26086f895def67688530?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200"
+              alt="User 1"
+              className="mx-auto w-20 h-20 rounded-full mb-4"
+            />
+            <p className="text-gray-800 text-lg mb-4">
+              The website is efficient and user-friendly, making it a help to identify crop diseases and find both chemical and biological treatments that we can use.
+            </p>
+            <div className="text-blue-600 font-semibold">
+              Benaarouch Mohamed
+            </div>
+            <div className="text-gray-500 text-sm">
+              IT Student | Morocco
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[35%] ml-5 max-md:w-full max-md:ml-0">
-            <div className="flex grow flex-col pt-2.5 px-2.5 items-start">
-              <div className="text-zinc-800 text-lg leading-7 max-w-[328px] ml-2.5">
-                As an agronomist, I highly recommend this solution. It's been effective in identifying and providing solutions to combat plant diseases.
-              </div>{" "}
-              <div className="self-stretch flex justify-between gap-0 mt-14 pb-12 items-start max-md:mt-10">
-                <div className="flex-col justify-center items-center overflow-hidden relative flex aspect-square w-14">
-                  <img
-                    loading="lazy"
+
+          <div className=" p-6 rounded-lg shadow-md text-center">
+            <img
                     srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9528334e8ef534bdb7f84055b2c9080d091285ab0e40ebdb4f176d8070f6754a?apiKey=49a8e08e74bb44d9affdaac81f6699af&"
-                    className="absolute h-full w-full object-cover object-center inset-0"
-                  />{" "}
-                </div>{" "}
-                <div className="flex grow basis-[0%] flex-col pl-2.5 pr-20 items-start max-md:pr-5">
-                  <div className="text-zinc-800 text-lg leading-7 whitespace-nowrap">
-                    Boujamaa Echou
-                  </div>{" "}
-                  <div className="text-zinc-600 text-sm leading-5 whitespace-nowrap mt-2">
-                    Agronomist | Morocco
-                  </div>
-                </div>
-              </div>
+              alt="User 1"
+              className="mx-auto w-20 h-20 rounded-full mb-4"
+            />
+            <p className="text-gray-800 text-lg mb-4">
+            As an agronomist, I highly recommend this solution. It's been effective in identifying and providing solutions to combat plant diseases.
+            </p>
+            <div className="text-blue-600 font-semibold">
+            Boujamaa Echou
             </div>
-          </div>{" "}
-          <div className="flex flex-col items-stretch w-[29%] ml-5 max-md:w-full max-md:ml-0">
-            <div className="items-stretch flex grow flex-col pl-2.5 pt-2.5">
-              <div className="text-zinc-800 text-lg leading-7">
-                This app provided excellent analysis and solutions for my plant diseases. I highly recommend it to anyone looking to improve their crop health!
-              </div>
-              <div className="flex justify-between gap-0 mt-14 pb-12 items-start max-md:mt-10">
-                <img
-                  loading="lazy"
-                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&"
-                  className="aspect-square object-contain object-center w-14 overflow-hidden shrink-0 max-w-full"
-                />{" "}
-                <div className="flex grow basis-[0%] flex-col pl-2.5 pr-20 items-start max-md:pr-5">
-                  <div className="text-zinc-800 text-lg leading-7 whitespace-nowrap">
-                    Lamti Ibrahim
-                  </div>{" "}
-                  <div className="text-zinc-600 text-sm leading-5 whitespace-nowrap mt-2">
-                    Farmer | Tunis
-                  </div>
-                </div>
-              </div>
+            <div className="text-gray-500 text-sm">
+            Agronomist | Morocco
             </div>
           </div>
+
+          <div className=" p-6 rounded-lg shadow-md text-center">
+            <img
+                  srcSet="https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b28e8b1ea2c931951da7816ab754313fdb9dbba70c93517dfcf84e42f793120f?apiKey=49a8e08e74bb44d9affdaac81f6699af&"
+                  alt="User 1"
+              className="mx-auto w-20 h-20 rounded-full mb-4"
+            />
+            <p className="text-gray-800 text-lg mb-4">
+            This app provided excellent analysis and solutions for my plant diseases. I highly recommend it to anyone looking to improve their crop health!
+            </p>
+            <div className="text-blue-600 font-semibold">
+            Hamza Ibrahim
+            </div>
+            <div className="text-gray-500 text-sm">
+            Farmer | Tunis
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -183,4 +169,3 @@ function Home() {
 }
 
 export default Home;
-

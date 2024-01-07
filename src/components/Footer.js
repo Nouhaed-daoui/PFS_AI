@@ -9,7 +9,7 @@ import kachfLogo2 from '../images/Kachf_Logo/2.png'
 
 const Footer = () => {
   return (
-    <div className="justify-center  items-center flex flex-col px-16 max-md:px-5 mt-4  mx-4">
+    <div className="justify-center  items-center flex flex-col px-16 max-md:px-5 bg-lime-50">
       <div className="flex w-[760px] max-w-full flex-col">
         <div className="flex justify-center text-xl font-bold self-stretch max-md:max-w-full mb-4">
             <img src={kachfLogo2} alt="Logo"  className='w-20' />
