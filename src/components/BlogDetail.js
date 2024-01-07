@@ -134,11 +134,9 @@ const BlogDetail = () => {
   
   return (
      
-    <div  className='bg-gradient-to-t from-lime-400 to-lime-50 p-5 '>
-      <BlogContainer>
-       {/* <Header /> */}
-      {/* <DecorativeImageLeft src={PlanteCote} alt="Decorative Image" />
-      <DecorativeImageRight src={PlanteCote} alt="Decorative Image" />      */}
+    <div  className='bg-gradient-to-t from-lime-300 to-lime-50 p-5 '>
+      <BlogContainer className='bg-'>
+
 
     {/* {blogId && (
         <NavBarLink>

@@ -136,7 +136,7 @@ const Blog = () => {
             <img src={blog.image} alt={`Blog ${blog.id} Image`} style={{ width: '100%', height: '50%', objectFit: 'cover', borderRadius: '10px'}} />
             <h3 style={{ color: '#4caf50' }}>{blog.title}</h3>
             <p>{blog.content.substring(0, 100)}...</p>
-            <ReadMoreLink to={`/blog/${blog.id}`}>Read More</ReadMoreLink>
+            <ReadMoreLink to={`/library/${blog.id}`}>Read More</ReadMoreLink>
           </BlogCard>
         ))}
       </BlogList>
