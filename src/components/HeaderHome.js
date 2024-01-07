@@ -57,8 +57,8 @@ const HeaderHome = () => {
               </Link>
             </div>
             <div className="text-stone-800 text-sm">
-              <Link to="/Blog">
-                Blog
+              <Link to="/library">
+                Library
               </Link>
             </div>
             <div className="text-stone-800 text-sm">
