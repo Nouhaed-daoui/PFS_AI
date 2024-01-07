@@ -1,101 +1,69 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../images/logo.png';
-import kachfLogo2 from '../images/Kachf_Logo/2.png'
+import kachflogo from '../images/Kachf_Logo/2.png';
 
 const HeaderHome = () => {
-  const navStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '1em',
-    background: 'linear-gradient(to right, #ffffff, #4caf50)', // Dégradé du blanc vers le vert
-    color: 'white',
-    position: 'relative',
-  };
-
-
-  const logoStyle = {
-    textDecoration: 'none',
-    color: 'white',
-    fontSize: '1.5em',
-    fontWeight: 'bold',
-    display: 'flex', // Permet d'aligner l'image et le texte correctement
-    alignItems: 'center', // Centre l'image et le texte verticalement
-  };
-
-  const logoImgStyle = {
-    marginRight: '0.5em', // Ajoute un espace entre l'image et le texte
-    height: '45px', // Ajustez la hauteur selon vos besoins
-    // Ajoutez d'autres styles selon vos besoins
-  };
-
-  const navLinksStyle = {
-    display: 'flex',
-    gap: '1em',
-  };
-
-  const linkStyle = {
-    textDecoration: 'none',
-    color: 'white',
-    fontWeight: 'bold',
-  };
+  const [searchBoxVisibility, setSearchBoxVisibility] = useState(false);
 
   return (
-    // style={navStyle}
-    <header  className="items-center shadow-lg bg-white flex w-full flex-col justify-center px-16 max-md:max-w-full max-md:px-5">
+    <header className="bg-white shadow-md py-4 bg-lime-50">
+      <div className="container mx-auto flex items-center justify-between px-6 md:px-16">
+        <Link to="/" className="flex-none w-12">
+          <img src={kachflogo} alt="Logo" className="w-full" />
+        </Link>
 
-      <div className="items-center flex w-full max-w-[1140px] justify-between gap-5 pl-2.5 max-md:max-w-full max-md:flex-wrap">
-        <div className="flex items-stretch justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap">
-          <Link to="/" style={logoStyle}>
-            <img src={kachfLogo2} alt="Logo"  className='w-20 '/>
+        <div className="flex items-center space-x-6 ml-auto">
+          <div className="hidden md:flex items-center space-x-4">
+            <NavLink to="/library" label="Library" />
+            <NavLink to="/news" label="News" />
+            <NavLink to="/history" label="History" />
+            <NavLink to="/contact" label="Contact" />
+          </div>
+
+          <button
+            className="md:hidden bg-gray-200 w-12 h-12 rounded-full flex items-center justify-center focus:outline-none focus:ring focus:border-blue-300 hover:bg-gray-300 transition duration-300"
+            onClick={() => setSearchBoxVisibility(!searchBoxVisibility)}
+          >
+            <i className="fi fi-rr-search text-xl"></i>
+          </button>
+
+          <Link
+            className="btn-dark py-2 px-4 bg-green-500 hover:bg-green-600 transition duration-300 text-white rounded-full focus:outline-none focus:ring focus:border-blue-300"
+            to="/signin"
+          >
+            Sign In
           </Link>
 
-          <div className="items-stretch flex justify-between justify-end gap-5 px-8 self-end">
-            <div className="text-stone-800 text-m grow whitespace-nowrap">
-              <Link to="/">
-                Home
-              </Link>
-            </div>
-            <div className="text-stone-800 text-m">
-
-              <Link to="/library">
-                Library
-              </Link>
-            </div>
-            <div className="text-stone-800 text-m">
-              <Link to="/news">
-                News 
-              </Link>
-            </div>
-            <div className="text-stone-800 text-m">
-              <Link to="/History">
-                History
-              </Link>
-            </div>
-            <div className="text-stone-800 text-m">
-              <Link to="/Contact">
-                Contact Us
-              </Link>
-            </div>
-            <div className="text-stone-800 text-m grow whitespace-nowrap">
-              API
-            </div>
-          </div>
-        </div>
-
-        <div className="items-stretch self-stretch flex justify-between gap-5 pl-20 py-4 max-md:pl-5">
-          <div className="text-white text-right text-sm whitespace-nowrap justify-center items-stretch bg-red-700 grow px-6 py-2.5 rounded-lg max-md:px-5">
-          <Link to="/SignOut">
-            Sign Out
+          <Link
+            className="btn-light py-2 px-4 hidden md:block bg-gray-200 hover:bg-gray-300 transition duration-300 text-gray-700 rounded-full focus:outline-none focus:ring focus:border-blue-300"
+            to="/signup"
+          >
+            Sign Up
           </Link>
-          </div>
         </div>
+
+        {/* Search Box (Mobile) */}
+        {searchBoxVisibility && (
+          <div className="md:hidden absolute top-full left-0 mt-2.5 bg-white border-b border-gray-300 w-full p-4">
+            <input
+              type="text"
+              placeholder="Search"
+              className="w-full bg-gray-100 p-2 rounded-full placeholder-gray-500 focus:outline-none focus:ring focus:border-blue-300"
+            />
+          </div>
+        )}
       </div>
-
-
     </header>
   );
 };
+
+const NavLink = ({ to, label }) => (
+  <Link
+    to={to}
+    className="text-gray-700 hover:text-gray-900 transition duration-300 focus:outline-none focus:ring focus:border-blue-300"
+  >
+    {label}
+  </Link>
+);
 
 export default HeaderHome;
