@@ -2,15 +2,18 @@ import * as React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
+import kachfLogo2 from '../images/Kachf_Logo/2.png'
 
 
 
 
 const Footer = () => {
   return (
-    <div className="justify-center items-center flex flex-col px-16 max-md:px-5 m-4">
+    <div className="justify-center  items-center flex flex-col px-16 max-md:px-5 mt-4  mx-4">
       <div className="flex w-[760px] max-w-full flex-col">
-        <div className="justify-center text-lime-700 text-center text-xl font-bold self-stretch max-md:max-w-full mb-4">🍃 Kachf</div>
+        <div className="flex justify-center text-xl font-bold self-stretch max-md:max-w-full mb-4">
+            <img src={kachfLogo2} alt="Logo"  className='w-20' />
+        </div>
         <div className="text-zinc-900 text-sm self-center whitespace-nowrap"><Link to="#">Our Vision API</Link></div>
         <div className="text-zinc-900 text-sm self-center whitespace-nowrap mt-1"><Link to="/Contact">Contact Us</Link></div>
         <div className="items-stretch self-center flex w-[296px] max-w-full justify-between gap-5 my-3 pt-3">
@@ -30,7 +33,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="">© 2023 | Kachf 🍃</div>
+      <div className="mb-4">© 2023 | Kachf 🍃</div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
+import kachfLogo2 from '../images/Kachf_Logo/2.png'
 
 const HeaderHome = () => {
   const navStyle = {
@@ -47,36 +48,36 @@ const HeaderHome = () => {
       <div className="items-center flex w-full max-w-[1140px] justify-between gap-5 pl-2.5 max-md:max-w-full max-md:flex-wrap">
         <div className="flex items-stretch justify-between gap-5 my-auto max-md:max-w-full max-md:flex-wrap">
           <Link to="/" style={logoStyle}>
-            <img src={logo} alt="Logo" style={logoImgStyle} />
+            <img src={kachfLogo2} alt="Logo"  className='w-20 '/>
           </Link>
 
-          <div className="items-stretch flex justify-between gap-5 px-4 self-center">
-            <div className="text-stone-800 text-sm grow whitespace-nowrap">
+          <div className="items-stretch flex justify-between justify-end gap-5 px-8 self-end">
+            <div className="text-stone-800 text-m grow whitespace-nowrap">
               <Link to="/">
                 Home
               </Link>
             </div>
-            <div className="text-stone-800 text-sm">
+            <div className="text-stone-800 text-m">
               <Link to="/library">
                 Library
               </Link>
             </div>
-            <div className="text-stone-800 text-sm">
+            <div className="text-stone-800 text-m">
               <Link to="/news">
                 News 
               </Link>
             </div>
-            <div className="text-stone-800 text-sm">
+            <div className="text-stone-800 text-m">
               <Link to="/History">
                 History
               </Link>
             </div>
-            <div className="text-stone-800 text-sm">
+            <div className="text-stone-800 text-m">
               <Link to="/Contact">
                 Contact Us
               </Link>
             </div>
-            <div className="text-stone-800 text-sm grow whitespace-nowrap">
+            <div className="text-stone-800 text-m grow whitespace-nowrap">
               API
             </div>
           </div>
